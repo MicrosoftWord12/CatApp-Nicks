@@ -8,11 +8,11 @@ class Cat (val name: String, var age: Int, var weight: Int) {
         return false
     }
 
-    fun eat(): Boolean {
-        if (weight <= 20) {
+    fun eat(amount: Int): Boolean {
+        if (weight + amount >= 20) {
             return false
         }
-        weight++
+        weight += amount
         return true
     }
 
